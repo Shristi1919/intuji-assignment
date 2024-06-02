@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 require_once 'config.php';
 
 session_start();
@@ -23,6 +23,6 @@ $service = new Google_Service_Calendar($client);
 $eventId = $_GET['id'];
 $service->events->delete('primary', $eventId);
 
-header('Location: events.php?deleted=true');
+header('Location: ../view/events.php?deleted=true');
 exit;
 ?>
